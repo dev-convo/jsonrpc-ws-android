@@ -28,11 +28,12 @@ import com.thetransactioncompany.jsonrpc2.JSONRPC2Response;
 
 import org.java_websocket.WebSocketFactory;
 import org.java_websocket.client.WebSocketClient;
-import org.java_websocket.client.WebSocketClient.WebSocketClientFactory;
-import org.java_websocket.drafts.Draft_17;
 import org.java_websocket.handshake.ServerHandshake;
+import org.java_websocket.server.DefaultWebSocketServerFactory;
 
 import java.net.URI;
+
+import javax.net.SocketFactory;
 
 import fi.vtt.nubomedia.utilitiesandroid.LooperExecutor;
 
@@ -41,7 +42,7 @@ public class JsonRpcWebSocketClient {
 	private class ExtendedWebSocketClient extends WebSocketClient {
 
 		public ExtendedWebSocketClient(URI serverUri, WebSocketConnectionEvents events) {
-			super(serverUri, new Draft_17());
+			super(serverUri);
 		}
 
 		@Override
@@ -194,12 +195,8 @@ public class JsonRpcWebSocketClient {
 		}
 	}
 
-	public final void setWebSocketFactory( WebSocketClientFactory wsf ) {
-		client.setWebSocketFactory(wsf);
-	}
-
-	public final WebSocketFactory getWebSocketFactory() {
-		return client.getWebSocketFactory();
+	public final void setWebSocketFactory( SocketFactory wsf ) {
+		client.setSocketFactory(wsf);
 	}
 
 }
