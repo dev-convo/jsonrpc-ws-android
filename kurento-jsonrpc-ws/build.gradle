@@ -10,8 +10,8 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 27
-        versionCode 6
-        versionName "1.0.6"
+        versionCode 7
+        versionName "1.0.7"
     }
     buildTypes {
         release {
@@ -27,7 +27,7 @@ dependencies {
 
     implementation('com.thetransactioncompany:jsonrpc2-base:1.38.1')
     implementation('org.java-websocket:Java-WebSocket:1.4.0')
-    implementation('fi.vtt.nubomedia:utilities-android:1.0.2@aar') { transitive=true }
+    implementation('fi.vtt.nubomedia:utilities-android:1.0.2@aar')
 }
 
 def siteUrl = 'https://github.com/nubomedia-vtt/jsonrpc-ws-android'      // Homepage URL of the library

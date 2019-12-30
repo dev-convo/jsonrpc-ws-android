@@ -26,10 +26,8 @@ import com.thetransactioncompany.jsonrpc2.JSONRPC2ParseException;
 import com.thetransactioncompany.jsonrpc2.JSONRPC2Request;
 import com.thetransactioncompany.jsonrpc2.JSONRPC2Response;
 
-import org.java_websocket.WebSocketFactory;
 import org.java_websocket.client.WebSocketClient;
 import org.java_websocket.handshake.ServerHandshake;
-import org.java_websocket.server.DefaultWebSocketServerFactory;
 
 import java.net.URI;
 
