@@ -5,12 +5,11 @@ apply plugin: "com.jfrog.bintray"
 version "1.0.6"
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "21.1.2"
+    compileSdkVersion 27
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 23
+        minSdkVersion 21
+        targetSdkVersion 27
         versionCode 6
         versionName "1.0.6"
     }
@@ -23,12 +22,12 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
 
-    compile('com.thetransactioncompany:jsonrpc2-base:1.38')
-    compile('org.java-websocket:Java-WebSocket:1.3.0')
-    compile('fi.vtt.nubomedia:utilities-android:1.0.1@aar') { transitive=true }
+    implementation('com.thetransactioncompany:jsonrpc2-base:1.38.1')
+    implementation('org.java-websocket:Java-WebSocket:1.4.0')
+    implementation('fi.vtt.nubomedia:utilities-android:1.0.2@aar') { transitive=true }
 }
 
 def siteUrl = 'https://github.com/nubomedia-vtt/jsonrpc-ws-android'      // Homepage URL of the library

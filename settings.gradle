@@ -1,1 +1,1 @@
-include ':jsonrpc-ws-android'
+include ':kurento-jsonrpc-ws'
